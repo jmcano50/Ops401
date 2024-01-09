@@ -8,7 +8,7 @@
 $InactivityLimit = 300 
 
 # The registry path where the screen lock settings are stored.
-$regitstryPatch = "HKCU:\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop"
+$regitstryPath = "HKCU:\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop"
 $propertyName = "ScreenSaveTimeOut" # Name of the property to be set.
 $propertyValue = $InactivityLimit # Value of the property (time limit).
 
