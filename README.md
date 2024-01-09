@@ -8,6 +8,8 @@
 - [ Lab 01: Powershell Screen Lock Automation](401Lab1.ps1)
 - [Ops Challenge: Uptime Sensor Tool Part 1 of 2](401Ops2.md)
 - [Uptime Sensor Tool Part 1 of 2](401Ops2.py)
+- [401Ops2a Screenshot](Photo_Screenshots/401Ops2a.png)
+- ![401Ops2b Screenshot](Photo_Screenshots/401Ops2b.png)
 
 ## Module 2 Data Security
 - [ Ops Challenge: ]()
