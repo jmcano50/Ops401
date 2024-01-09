@@ -8,15 +8,29 @@
 $InactivityLimit = 300 
 
 # The registry path where the screen lock settings are stored.
-$regitstryPath = "HKCU:\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop"
+$registryPath = "HKCU:\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop"
 $propertyName = "ScreenSaveTimeOut" # Name of the property to be set.
 $propertyValue = $InactivityLimit # Value of the property (time limit).
+
+# Starts a 'Try' block to handle potential errors.
+Try {
 
 # Checks if the registry path exists, if it does not, the script creates it.
 If (!(Test-Path $registryPath)) {
     New-Item -Path $registryPath -Force | Out-Null
 }
 
-# Enables the screensaver, which is needed for the screen lock to activate after the specific time above.
-Set-ItemProperty -Path $registryPath -Name "ScreenSaveActive" -Value "1" 
+# Sets the screen save timeout value in the registry.
+Set-ItemProperty -Path $registryPath -Name $propertyName -Value $propertyValue 
 
+# Activates the screen saver feature.
+Set-ItemProperty -Path $registryPath -Name "ScreenSaveActive" -Value "1"
+
+# Prints a message confirming successful registry update.
+Write-Host "Registry updated successfully."
+
+# Initiates a Catch clock for handling exceptions.
+} Catch {
+    Write-Host "Error: $_"
+}
+#Prints any error encountered during the execution of the Try block.
