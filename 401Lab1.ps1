@@ -1,4 +1,4 @@
-# Script Name:                  Ops Lab 01: Powershell AD Automation
+# Script Name:                  Ops Lab 01: Powershell Screen Lock Automation
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/08/2024      
 # Purpose:                      This PowerShell script is to automatically set up a screen lock on Windows 10 after a period of time.
