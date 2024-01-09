@@ -37,3 +37,7 @@ if __name__ == "__main__":
 
     except KeyboardInterrupt:
             print("Monitoring stopped.")
+
+
+# - [401Ops2a Screenshot](Photo_Screenshots/401Ops2a.png)
+# - [401Ops2b Screenshot](Photo_Screenshots/401Ops2b.png)
