@@ -1,7 +1,7 @@
 # Script Name:                  Ops 02: Uptime Sensor Tool Part 1 of 2
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/09/2024      
-# Purpose:                      This PowerShell script is to monitor the availability of a specified IP address by sending periodic ICMP(ping) packets and recording the status in a log file, providing a simple way to check if a hos is up or down on a LAN.
+# Purpose:                      This Python script is to monitor the availability of a specified IP address by sending periodic ICMP(ping) packets and recording the status in a log file, providing a simple way to check if a hos is up or down on a LAN.
 # Resources:                    https://chat.openai.com/share/be10bd55-5de3-4295-b0e7-ad45a62c94ee
 
 import os
