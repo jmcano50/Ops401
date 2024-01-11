@@ -10,6 +10,10 @@
 - [Uptime Sensor Tool Part 1 of 2](401Ops2.py)
     - [401Ops2a Screenshot](Photo_Screenshots/401Ops2a.png)
     - [401Ops2b Screenshot](Photo_Screenshots/401Ops2b.png)
+- [Uptime Sensor Tool Part 2 of 2](401Ops3.py)
+    - [401Ops3a Screenshot](Photo_Screenshots/401Ops3a.png))
+    - [401Ops3b Screenshot](Photo_Screenshots/401Ops3b.png)
+    - [401Ops3c Screenshot](Photo_Screenshots/401Ops3c.png)
 
 ## Module 2 Data Security
 - [ Ops Challenge: ]()

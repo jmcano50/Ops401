@@ -50,7 +50,7 @@ if __name__ == "__main__":
                 log_file.flush()
 
                 previous_status = current_status
-                time.sleep(60) # Adjust the sleep time as needed
+                time.sleep(10) # Adjust the sleep time as needed
 
     except KeyboardInterrupt:
         print("Monitoring stopped.")            
