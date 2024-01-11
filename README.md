@@ -5,7 +5,8 @@
 # Ops 401: Cybersecurity Engineering
 
 ## Module 1 Governance, Risk, and Compliance (GRC)
-- [ Lab 01: Powershell Screen Lock Automation](401Lab1.ps1)
+- [Lab 01: PowerShell Screen Lock Automation](401Lab1.md)
+- [Powershell Screen Lock Automation](401Lab1.ps1)
 - [Ops Challenge: Uptime Sensor Tool Part 1 of 2](401Ops2.md)
 - [Uptime Sensor Tool Part 1 of 2](401Ops2.py)
     - [401Ops2a Screenshot](Photo_Screenshots/401Ops2a.png)
