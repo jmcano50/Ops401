@@ -1,10 +1,3 @@
-# Script Name:                  Ops 06: Encryption file or message part 2 of 3
-# Author:                       Juan Miguel Cano
-# Date of latest revision:      01/17/2024      
-# Purpose:                      This Python script Encrypts a file or a message
-# Resources:                    https://chat.openai.com/share/089a1eff-6811-4986-808d-68a4e29a5363
-
-
 #!/usr/bin/env python3
 
 import os
@@ -79,18 +72,31 @@ def ransomware_simulation():
     change_wallpaper(wallpaper_image_path)
     show_ransomware_popup(ransomware_message)
 
+# Function to recursively encrypt a folder
+def encrypt_folder(folder_path, key):
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            file_path = os.path.join(root, file)
+            encrypt_file(file_path, key)
+
+# Function to recursively decrypt a folder
+def decrypt_folder(folder_path, key):
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            file_path = os.path.join(root, file)
+            decrypt_file(file_path, key)
+
 # Main function to handle user input and perform actions
 def main():
     if not os.path.exists("encryption_key.key"):
         generate_key()
     key = load_key()
 
-    # Debug: Print the first few characters of the key for verification
     print("Debug: Key (first 10 chars):", key[:10])
 
     while True:
-        print("1. Encrypt a file\n2. Decrypt a file\n3. Encrypt a message\n4. Decrypt a message\n5. Ransomware Simulation (disabled if tkinter not installed)\n6. Exit")
-        mode = input("Enter the mode (1/2/3/4/5/6): ")
+        print("1. Encrypt a file\n2. Decrypt a file\n3. Encrypt a message\n4. Decrypt a message\n5. Ransomware Simulation (disabled if tkinter not installed)\n6. Encrypt a folder\n7. Decrypt a folder\n8. Exit")
+        mode = input("Enter the mode (1/2/3/4/5/6/7/8): ")
 
         if mode == '1':
             filepath = input("Enter file path to encrypt: ")
@@ -111,10 +117,18 @@ def main():
             ransomware_simulation()
             print("Ransomware simulation executed.")
         elif mode == '6':
+            folder_path = input("Enter folder path to encrypt: ")
+            encrypt_folder(folder_path, key)
+            print("Folder encrypted successfully.")
+        elif mode == '7':
+            folder_path = input("Enter folder path to decrypt: ")
+            decrypt_folder(folder_path, key)
+            print("Folder decrypted successfully.")
+        elif mode == '8':
             print("Goodbye!")
             break
         else:
-            print("Invalid mode. Please choose 1, 2, 3, 4, 5, or 6.")
+            print("Invalid mode. Please choose 1, 2, 3, 4, 5, 6, 7, or 8.")
 
 if __name__ == "__main__":
     main()
