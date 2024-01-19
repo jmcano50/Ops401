@@ -21,6 +21,10 @@
 
 ## Module 2 Data Security
 - [ Ops Challenge: ]()
+- [Encryption file or message](401Ops6.py)
+
+- [ Ops Challenge: ]()
+- [Encryption file or message part 2 of 3](https://github.com/jmcano50/Ops401/blob/main/401Ops7.py)
 
 
 ## Module 3 Security Operations
