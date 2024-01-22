@@ -3,7 +3,7 @@
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/17/2024      
 # Purpose:                      This Python script Encrypts a file or a message
-# Resources:                    https://chat.openai.com/share/089a1eff-6811-4986-808d-68a4e29a5363
+# Resources:                    https://chat.openai.com/share/8d91c6a6-0cc4-4646-bc55-0e1efff0a96f
 
 
 
