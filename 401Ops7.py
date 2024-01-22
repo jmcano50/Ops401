@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Script Name:                  Ops 06: Encryption file or message part 2 of 3
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/17/2024      
@@ -5,7 +6,7 @@
 # Resources:                    https://chat.openai.com/share/089a1eff-6811-4986-808d-68a4e29a5363
 
 
-#!/usr/bin/env python3
+
 
 import os
 import ctypes
