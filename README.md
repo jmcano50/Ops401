@@ -29,6 +29,7 @@
 
 ## Module 3 Security Operations
 - [ Ops Challenge: ]()
+- [Encryption file or message part 3 of 3](401Ops11.py)
 
 
 ## Module 4 Cloud Security
