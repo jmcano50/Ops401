@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # Script Name:                  Ops 06: Network Security Tool with Scapy part 2 of 3
 # Author:                       Juan Miguel Cano
-# Date of latest revision:      01/17/2024      
-# Purpose:                      This Python script Encrypts a file or a message
+# Date of latest revision:      01/23/2024      
+# Purpose:                      Performs network scanning, including TCP port range scanning and ICMP ping sweeps, to ID open ports and active hosts on a network
 # Resources:                    https://chat.openai.com/share/20ab9c80-7aef-40c5-ae7c-fefab534fd71
 
 from scapy.all import sr1, ICMP, IP, TCP, send
