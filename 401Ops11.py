@@ -5,13 +5,6 @@
 # Purpose:                      This is a network scanning tool
 # Resources:                    https://chat.openai.com/share/8d91c6a6-0cc4-4646-bc55-0e1efff0a96f
 
-#!/usr/bin/env python3
-# Script Name:                  Ops 06: Encryption file or message part 3 of 3
-# Author:                       Juan Miguel Cano
-# Date of latest revision:      01/17/2024      
-# Purpose:                      This Python script Encrypts a file or a message
-# Resources:                    https://chat.openai.com/share/8d91c6a6-0cc4-4646-bc55-0e1efff0a96f
-
 from scapy.all import sr1, ICMP, IP, TCP, sr
 import ipaddress
     
