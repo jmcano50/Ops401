@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# Script Name:                  Ops 06: Network Security Tool with Scapy part 1 of 3
+# Script Name:                  Ops 06: Encryption file or message part 3 of 3
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/17/2024      
-# Purpose:                      This is a network scanning tool
+# Purpose:                      This Python script Encrypts a file or a message
 # Resources:                    https://chat.openai.com/share/8d91c6a6-0cc4-4646-bc55-0e1efff0a96f
 
 
@@ -11,7 +11,9 @@
 import os
 import ctypes
 from cryptography.fernet import Fernet, InvalidToken
-from scapy.all import *
+from scapy.all import sr1, ICMP, IP, TCP, sr
+import ipaddress
+import subprocess
 
 # Check if tkinter is available
 try:
@@ -20,8 +22,7 @@ try:
     tkinter_available = True
 except ModuleNotFoundError:
     print("tkinter module not found. Ransomware simulation feature will be disabled.")
-    tkinter_available = False
-
+    
 # Function to generate and save a new encryption key
 def generate_key():
     key = Fernet.generate_key()
@@ -30,8 +31,7 @@ def generate_key():
 
 # Function to load the existing encryption key
 def load_key():
-    with open("encryption_key.key", "rb") as key_file:
-        return key_file.read()
+    return open("encryption_key.key", "rb").read()
 
 # Function to encrypt a file using the provided key
 def encrypt_file(filepath, key):
@@ -64,7 +64,7 @@ def decrypt_string(text, key):
 def change_wallpaper(image_path):
     ctypes.windll.user32.SystemParametersInfoW(20, 0, image_path, 0)
 
-# Function to create a popup window with a ransomware message
+# Function to create a popup window with a ransomware message (Windows only)
 def show_ransomware_popup(message):
     if tkinter_available:
         root = tk.Tk()
@@ -74,7 +74,7 @@ def show_ransomware_popup(message):
     else:
         print("Ransomware message: ", message)
 
-# Function to simulate a ransomware attack
+# Function to simulate a ransomware attack (Windows only)
 def ransomware_simulation():
     wallpaper_image_path = "path_to_ransomware_wallpaper.jpg"
     ransomware_message = "Your files have been encrypted! To decrypt them, send 1 Bitcoin to..."
@@ -96,42 +96,19 @@ def tcp_port_scan(host_ip, port_list):
         elif response.getlayer(TCP).flags == 0x14:
             print(f"Port {port} is closed.")
 
-# Main function to handle user input and perform actions
-def main():
-    if not os.path.exists("encryption_key.key"):
-        generate_key()
-    key = load_key()
-
-    # Debug: Print the first few characters of the key for verification
-    print("Debug: Key (first 10 chars):", key[:10])
-
-    while True:
-        print("1. Encrypt a file\n2. Decrypt a file\n3. Encrypt a message\n4. Decrypt a message\n5. Ransomware Simulation (disabled if tkinter not installed)\n6. Exit")
-        mode = input("Enter the mode (1/2/3/4/5/6): ")
-
-        if mode == '1':
-            filepath = input("Enter file path to encrypt: ")
-            encrypt_file(filepath, key)
-            print("File encrypted successfully.")
-        elif mode == '2':
-            filepath = input("Enter file path to decrypt: ")
-            decrypt_file(filepath, key)
-            print("File decrypted successfully.")
-        elif mode == '3':
-            text = input("Enter message to encrypt: ")
-            print("Encrypted message:", encrypt_string(text, key))
-        elif mode == '4':
-            text = input("Enter encrypted message: ")
-            decrypted_message = decrypt_string(text, key)
-            print("Decrypted message:", decrypted_message)
-        elif mode == '5' and tkinter_available:
-            ransomware_simulation()
-            print("Ransomware simulation executed.")
-        elif mode == '6':
-            print("Goodbye!")
-            break
+# Function to perform ICMP Ping Sweep
+def icmp_ping_sweep(network):
+    online_hosts = 0
+    network = ipaddress.ip_network(network, strict=False) # strict=False allows to ignore the host bits
+    print(f"Scanning the network: {network}")
+    for ip in network.hosts ():
+        resp = sr1(IP(dst=str(ip))/ICMP(), timeout=1, verbose=False)
+        if resp is None:
+            print(f"Scanning the network: {network}")
+        elif (int(resp.getlayer(ICMP).type) == 3 and
+              int(resp.getlayer(ICMP).code) in [1, 2, 3, 9, 10, 13]):
+            print(f"{ip} is actively blocking ICMP traffic.")
         else:
-            print("Invalid mode. Please choose 1, 2, 3, 4, 5, or 6.")
-
-if __name__ == "__main__":
-    main()
+            print(f"{ip} is responding.")
+            online_hosts += 1
+    print(f"Total hosts online: {online_hosts}")
