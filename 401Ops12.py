@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Script Name:                  Ops 06: Network Security Tool with Scapy part 2 of 3
+# Script Name:                  Ops 12: Network Security Tool with Scapy part 2 of 3
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/23/2024      
 # Purpose:                      Performs network scanning, including TCP port range scanning and ICMP ping sweeps, to ID open ports and active hosts on a network
