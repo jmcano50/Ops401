@@ -5,23 +5,23 @@
 # Purpose:                      This Python script Encrypts a file or a message
 # Resources:                    https://chat.openai.com/share/8d91c6a6-0cc4-4646-bc55-0e1efff0a96f
 
-from scapy.all import sr1, ICMP, IP, TCP, sr
+from scapy.all import sr1, ICMP, IP, TCP, send
 import ipaddress
     
 # TCP Port Range Scanner
 def tcp_port_scan(host_ip, port_list):
     for port in port_list:
         packet = IP(dst=host_ip)/TCP(dport=port, flags='S')
-        response = sr1(packet, timeout=1, verbose=False)
-    if response is None:
+        response = sr1(packet, timeout=2, verbose=True)
+          if response is None:
         print(f"Port {port}is filtered (no response).")
-    elif response.haslayer(TCP):
-        if response.getlayer(TCP).flags == 0x12:
-            # Send RST packet to close the connection
-            send(IP(dst=host_ip)/TCP(dport=port, flags='R'), timeout=1, verbose=False)
-            print(f"Port {port} is open.")
-        elif response.getlayer(TCP).flags == 0x14:
-            print(f"Port {port} is closed.")
+        elif response.haslayer(TCP):
+            if response.getlayer(TCP).flags == 0x12:
+                # Send RST packet to close the connection
+                send(IP(dst=host_ip)/TCP(dport=port, flags='R'), timeout=1, verbose=False)
+                print(f"Port {port} is open.")
+            elif response.getlayer(TCP).flags == 0x14:
+                print(f"Port {port} is closed.")
 
 # ICMP Ping Sweep Tool
 def icmp_ping_sweep(network):
@@ -66,3 +66,4 @@ def main():
             print("Invalid mode. Please choose a number between 1 and 3.")
 
 if __name__ == "__main__":
+    main()
