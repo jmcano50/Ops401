@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Script Name:                  Ops 06: Encryption file or message part 2 of 3
+# Script Name:                  Ops 06: Network Security Tool with Scapy part 2 of 3
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/17/2024      
 # Purpose:                      This Python script Encrypts a file or a message

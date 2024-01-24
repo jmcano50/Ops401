@@ -2,7 +2,7 @@
 # Script Name:                  Ops 06: Network Security Tool with Scapy part 1 of 3
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/17/2024      
-# Purpose:                      Tst whether a TCP port is open or closed using Scrapy
+# Purpose:                      Test whether a TCP port is open or closed using Scrapy
 # Resources:                    https://chat.openai.com/share/20ab9c80-7aef-40c5-ae7c-fefab534fd71
 
 from scapy.all import sr1, IP, TCP, send 
