@@ -3,7 +3,7 @@
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/17/2024      
 # Purpose:                      Tst whether a TCP port is open or closed using Scrapy
-# Resources:                    https://chat.openai.com/share/8d91c6a6-0cc4-4646-bc55-0e1efff0a96f
+# Resources:                    https://chat.openai.com/share/20ab9c80-7aef-40c5-ae7c-fefab534fd71
 
 from scapy.all import sr1, IP, TCP, send 
 import re 
