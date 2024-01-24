@@ -13,8 +13,8 @@ def tcp_port_scan(host_ip, port_list):
     for port in port_list:
         packet = IP(dst=host_ip)/TCP(dport=port, flags='S')
         response = sr1(packet, timeout=2, verbose=True)
-          if response is None:
-        print(f"Port {port}is filtered (no response).")
+        if response is None:
+            print(f"Port {port}is filtered (no response).")
         elif response.haslayer(TCP):
             if response.getlayer(TCP).flags == 0x12:
                 # Send RST packet to close the connection
