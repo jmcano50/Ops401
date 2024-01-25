@@ -24,14 +24,14 @@
 - [Encryption file or message](401Ops6.py)
 
 - [ Ops Challenge: ]()
-- [Encryption file or message part 2 of 3](https://github.com/jmcano50/Ops401/blob/main/401Ops7.py)
+- [Encryption file or message ](https://github.com/jmcano50/Ops401/blob/main/401Ops7.py)
 
 
 ## Module 3 Security Operations
 - [ Ops Challenge: ]()
-- [Encryption file or message part 3 of 3](401Ops11.py)
-
-
+- [Network Security Tool with Scapy part 1 of 3](401Ops11.py)
+- [Network Security Tool with Scapy part 2 of 3](401Ops12.py)
+- [Network Security Tool with Scapy part 3 of 3](401Ops13.py)
 ## Module 4 Cloud Security
 - [ Ops Challenge: ]()
 
