@@ -26,7 +26,7 @@ def tcp_port_scan(host_ip, port_list):
         elif response.haslayer(TCP):
             if response.getlayer(TCP).flags == 0x12:
                 # Send RST packet to close the connection
-                send(IP(dst=host_ip)/TCP(dport=port, flags='R'), timeout=1, verbose=False)
+                send(IP(dst=host_ip)/TCP(dport=port, flags='R'), verbose=False)
                 print(f"Port {port} is open.")
             elif response.getlayer(TCP).flags == 0x14:
                 print(f"Port {port} is closed.")
