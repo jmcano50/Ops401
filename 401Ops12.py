@@ -12,16 +12,19 @@ import ipaddress
 def tcp_port_scan(host_ip, port_list):
     for port in port_list:
         packet = IP(dst=host_ip)/TCP(dport=port, flags='S')
-        response = sr1(packet, timeout=2, verbose=True)
+        response = sr1(packet, timeout=2, verbose=False)
         if response is None:
             print(f"Port {port}is filtered (no response).")
         elif response.haslayer(TCP):
             if response.getlayer(TCP).flags == 0x12:
                 # Send RST packet to close the connection
-                send(IP(dst=host_ip)/TCP(dport=port, flags='R'), timeout=1, verbose=False)
+                send(IP(dst=host_ip)/TCP(dport=port, flags='R'), verbose=False)
+                
                 print(f"Port {port} is open.")
             elif response.getlayer(TCP).flags == 0x14:
                 print(f"Port {port} is closed.")
+        else:
+            print(f"Port{port} is filtered and silently dropped.")
 
 # ICMP Ping Sweep Tool
 def icmp_ping_sweep(network):
