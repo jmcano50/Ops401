@@ -3,7 +3,7 @@
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/24/2024      
 # Purpose:                      Performs network scanning, including TCP port range scanning and ICMP ping sweeps, to ID open ports and active hosts on a network
-# Resources:                    https://chat.openai.com/share/20ab9c80-7aef-40c5-ae7c-fefab534fd71
+# Resources:                    https://chat.openai.com/share/e9365a74-71a0-4161-945a-91a4479cc57d
 
 from scapy.all import sr1, ICMP, IP, TCP, send
 import re
