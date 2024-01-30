@@ -21,6 +21,9 @@ def offensive_mode(file_path):
                 if not word:
                     break
                 print(word)
+                line_count += 1
+                if line_count >= max_lines:
+                    break  # Stop displaying after reaching the maximum lines
                 time.sleep(delay)
    except FileNotFoundError:
         print("File not found.")
@@ -44,7 +47,7 @@ def defensive_mode(file_path):
                                                               
 if __name__ == "__main__":
    mode = input("Select a mode (1 for Offensive, 2 for Defensive): ")
-   file_path = "rockyou.txt" # The word file is in this directory
+   file_path = "smaller_rockyou.txt"  # Use the smaller wordlist file as the wordlist
 
    if mode == '1':
         offensive_mode(file_path)
