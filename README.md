@@ -35,6 +35,7 @@
 ## Module 4 Cloud Security
 - [ Ops Challenge: ]()
 - [Automated Brute Force Wordlist Attack Tool Part 1 of 3](401Ops16.py)
+- [Automated Brute Force Wordlist Attack Tool Part 2 or 3](401Ops17.py)
 
 
 
