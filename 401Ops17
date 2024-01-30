@@ -2,10 +2,10 @@
 # Script Name:                  Ops 17: Automated Brute Force Wordlist Attack Tool Part 2 of 3
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/29/2024      
-# Purpose:                      Provides two modes for interacting with a word list file, 
-# Purpose cont:                 allowing users to either iterate through the list with delays (simulating a dictionary attack) 
-# Purpose cont:                 or search for specific words within the list
-# Resources:                    https://chat.openai.com/share/6fa45c27-3231-47cf-a6fa-3d855cf80f79                    
+# Purpose:                      Provides two modes for interacting with a word list file, allwoing users to
+# Purpose cont:                 either iterate through the list with delays (simulating a dictionary attack), 
+# Purpose cont:                 search for specific words within the list, or Authenticat to an SSH server by its IP address
+# Resources:                    https://chat.openai.com/share/34f8b3b6-f1a9-48f1-b2ea-c60fa5efebaf                   
 
 import time
 import paramiko
