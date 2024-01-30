@@ -4,18 +4,18 @@
 # Date of latest revision:      01/29/2024      
 # Purpose:                      Provides two modes for interacting with a word list file, 
 # Purpose cont:                 allowing users to either iterate through the list with delays (simulating a dictionary attack) 
-# Purpose cont:                 or search for specific words with in the list
+# Purpose cont:                 or search for specific words within the list
 # Resources:                    https://chat.openai.com/share/6fa45c27-3231-47cf-a6fa-3d855cf80f79                    
 
 import time
 
-#Function to perfor Mode 1: Offensive; Dictionary Iterator
+# Function to perform Mode 1: Offensive; Dictionary Iterator
 def offensive_mode(file_path):
    delay = float(input("Enter the delay between words (in seconds): "))
    try:
-        with open(file_path, 'rb') as file: # Open in binary mode
+        with open(file_path, 'r') as file:  # Open in text mode ('r')
            while True:
-                word = file.readline().decode('utf-8', errors='ignore').strip()
+                word = file.readline().strip()
                 if not word:
                     break
                 print(word)
@@ -27,12 +27,12 @@ def offensive_mode(file_path):
 def defensive_mode(file_path):
     user_input = input("Enter a word to search: ")
     try:
-        with open(file_path, 'rb') as file: # Open in binary mode
+        with open(file_path, 'r', errors='ignore') as file:  # Open in text mode ('r') and ignore decoding errors
             while True:
                 line = file.readline()
                 if not line:
                     break
-                word = line.decode('utf-8', errors='ignore').strip()
+                word = line.strip()
                 if user_input == word:
                     print("The word is in the word list.")
                     return
