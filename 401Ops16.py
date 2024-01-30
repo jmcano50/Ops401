@@ -12,6 +12,8 @@ import time
 # Function to perform Mode 1: Offensive; Dictionary Iterator
 def offensive_mode(file_path):
    delay = float(input("Enter the delay between words (in seconds): "))
+   max_lines = int(input("Enter the maximum number of lines to display: "))
+   line_count = 0
    try:
         with open(file_path, 'r') as file:  # Open in text mode ('r')
            while True:
