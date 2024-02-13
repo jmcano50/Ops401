@@ -5,7 +5,7 @@
 # Purpose:                      demonstrate the manipulation of lists and the use of various list methods, including basic operations and involving tuples, sets, and dictionaries.                    
 # Execution:                    301Ops8.py
 # Resource:                     https://chat.openai.com/share/b15c3ed2-a523-4434-ac9d-234befe35207
-
+# Team member:                  Rodolfo Gonzalez
 import logging
 
 # Configure logging settings
