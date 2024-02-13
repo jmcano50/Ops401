@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-# Script Name:                  Ops Challenge: Python Collections
+# Script Name:                  Ops Challenge: Ops Challenge: Event Logging Tool Part 1 of 3
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      02/12/2024
-# Purpose:                      demonstrate the manipulation of lists and the use of various list methods, including basic operations and involving tuples, sets, and dictionaries.                    
+# Purpose:                      Incorporating logging capabilities into one of your existing Python tools.
+# Purpose 2:                    Demonstrate the manipulation of lists and the use of various list methods, including basic operations and involving tuples, sets, and dictionaries.                    
 # Execution:                    301Ops8.py
 # Resource:                     https://chat.openai.com/share/b15c3ed2-a523-4434-ac9d-234befe35207
 # Team member:                  Rodolfo Gonzalez

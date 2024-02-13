@@ -16,3 +16,29 @@
 2024-02-12 17:44:14,463 - WARNING - 'SSgt' is not in the list
 2024-02-12 17:44:14,463 - INFO - Reversed the order of elements in the list
 2024-02-12 17:44:14,463 - INFO - Sorted the list
+2024-02-12 20:26:20,172 - INFO - Printed the fourth element of the list
+2024-02-12 20:26:20,172 - INFO - Printed the sixth through tenth elements of the list
+2024-02-12 20:26:20,173 - INFO - Updated the list by changing the value of the seventh element
+2024-02-12 20:26:20,173 - INFO - Appended "Marine" to the list
+2024-02-12 20:26:20,173 - INFO - Cleared the list
+2024-02-12 20:26:20,173 - INFO - Created a copy of the original list
+2024-02-12 20:26:20,173 - INFO - Counted occurrences of "Pfc" in the list
+2024-02-12 20:26:20,173 - WARNING - 'SSgt' is not in the list
+2024-02-12 20:26:20,173 - INFO - Inserted "GySgt" at index 1 in the list
+2024-02-12 20:26:20,173 - INFO - Removed an element at index 3 from the list
+2024-02-12 20:26:20,173 - WARNING - 'SSgt' is not in the list
+2024-02-12 20:26:20,173 - INFO - Reversed the order of elements in the list
+2024-02-12 20:26:20,173 - INFO - Sorted the list
+2024-02-12 20:31:54,411 - INFO - Printed the fourth element of the list
+2024-02-12 20:31:54,411 - INFO - Printed the sixth through tenth elements of the list
+2024-02-12 20:31:54,411 - INFO - Updated the list by changing the value of the seventh element
+2024-02-12 20:31:54,411 - INFO - Appended "Marine" to the list
+2024-02-12 20:31:54,411 - INFO - Cleared the list
+2024-02-12 20:31:54,411 - INFO - Created a copy of the original list
+2024-02-12 20:31:54,411 - INFO - Counted occurrences of "Pfc" in the list
+2024-02-12 20:31:54,411 - WARNING - 'SSgt' is not in the list
+2024-02-12 20:31:54,412 - INFO - Inserted "GySgt" at index 1 in the list
+2024-02-12 20:31:54,412 - INFO - Removed an element at index 3 from the list
+2024-02-12 20:31:54,412 - WARNING - 'SSgt' is not in the list
+2024-02-12 20:31:54,412 - INFO - Reversed the order of elements in the list
+2024-02-12 20:31:54,412 - INFO - Sorted the list

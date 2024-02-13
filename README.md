@@ -36,6 +36,7 @@
 - [ Ops Challenge: ]()
 - [Automated Brute Force Wordlist Attack Tool Part 1 of 3](401Ops16.py)
 - [Automated Brute Force Wordlist Attack Tool Part 2 or 3](401Ops17.py)
+- [Automated Brute Force Wordlist Attack Tool Part 3 of 3](401Ops18.py)
 
 
 
@@ -46,6 +47,7 @@
 
 ## Module 6 Threat Modeling and Analysis
 - [ Ops Challenge: ]()
+- []
 
 
 
