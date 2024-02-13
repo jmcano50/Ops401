@@ -78,3 +78,16 @@
 2024-02-13 09:31:55,913 - WARNING - 'SSgt' is not in the list
 2024-02-13 09:31:55,913 - INFO - Reversed the order of elements in the list
 2024-02-13 09:31:55,913 - INFO - Sorted the list
+2024-02-13 09:37:02,373 - INFO - Printed the fourth element of the list
+2024-02-13 09:37:02,374 - INFO - Printed the sixth through tenth elements of the list
+2024-02-13 09:37:02,374 - INFO - Updated the list by changing the value of the seventh element
+2024-02-13 09:37:02,374 - INFO - Appended "Marine" to the list
+2024-02-13 09:37:02,374 - INFO - Cleared the list
+2024-02-13 09:37:02,374 - INFO - Created a copy of the original list
+2024-02-13 09:37:02,374 - INFO - Counted occurrences of "Pfc" in the list
+2024-02-13 09:37:02,374 - WARNING - 'SSgt' is not in the list
+2024-02-13 09:37:02,374 - INFO - Inserted "GySgt" at index 1 in the list
+2024-02-13 09:37:02,374 - INFO - Removed an element at index 3 from the list
+2024-02-13 09:37:02,374 - WARNING - 'SSgt' is not in the list
+2024-02-13 09:37:02,374 - INFO - Reversed the order of elements in the list
+2024-02-13 09:37:02,374 - INFO - Sorted the list
