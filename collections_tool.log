@@ -91,3 +91,26 @@
 2024-02-13 09:37:02,374 - WARNING - 'SSgt' is not in the list
 2024-02-13 09:37:02,374 - INFO - Reversed the order of elements in the list
 2024-02-13 09:37:02,374 - INFO - Sorted the list
+Aye Aye Sir0
+2024-02-13 09:48:30,096 - WARNING - Aye Aye Sir0
+Aye Aye Sir1
+2024-02-13 09:48:30,199 - WARNING - Aye Aye Sir1
+Aye Aye Sir2
+2024-02-13 09:48:30,304 - WARNING - Aye Aye Sir2
+Aye Aye Sir3
+2024-02-13 09:48:30,408 - WARNING - Aye Aye Sir3
+Aye Aye Sir4
+2024-02-13 09:48:30,512 - WARNING - Aye Aye Sir4
+2024-02-13 09:48:30,617 - INFO - Printed the fourth element of the list
+2024-02-13 09:48:30,617 - INFO - Printed the sixth through tenth elements of the list
+2024-02-13 09:48:30,617 - INFO - Updated the list by changing the value of the seventh element
+2024-02-13 09:48:30,617 - INFO - Appended "Marine" to the list
+2024-02-13 09:48:30,617 - INFO - Cleared the list
+2024-02-13 09:48:30,617 - INFO - Created a copy of the original list
+2024-02-13 09:48:30,617 - INFO - Counted occurrences of "Pfc" in the list
+2024-02-13 09:48:30,617 - WARNING - 'SSgt' is not in the list
+2024-02-13 09:48:30,618 - INFO - Inserted "GySgt" at index 1 in the list
+2024-02-13 09:48:30,618 - INFO - Removed an element at index 3 from the list
+2024-02-13 09:48:30,618 - WARNING - 'SSgt' is not in the list
+2024-02-13 09:48:30,618 - INFO - Reversed the order of elements in the list
+2024-02-13 09:48:30,618 - INFO - Sorted the list

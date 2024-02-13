@@ -21,6 +21,7 @@ logger.setLevel(logging.DEBUG)
 
 # Create and configure handler for rotating file logs
 handler = RotatingFileHandler('collections_tool.log',maxBytes=5*1024*1024, backupCount=3)
+logger.addHandler(handler) # This line attaches the handler to the logger
 
 for i in range(5): # Adjust range as needed
     logmsg = "Aye Aye Sir"
