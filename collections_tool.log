@@ -132,3 +132,39 @@ Aye Aye Sir4
 2024-02-13 10:01:55,478 - WARNING - 'SSgt' is not in the list
 2024-02-13 10:01:55,478 - INFO - Reversed the order of elements in the list
 2024-02-13 10:01:55,478 - INFO - Sorted the list
+2024-02-13 10:07:28,266 - WARNING - Aye Aye Sir0
+2024-02-13 10:07:28,369 - WARNING - Aye Aye Sir1
+2024-02-13 10:07:28,474 - WARNING - Aye Aye Sir2
+2024-02-13 10:07:28,578 - WARNING - Aye Aye Sir3
+2024-02-13 10:07:28,682 - WARNING - Aye Aye Sir4
+2024-02-13 10:07:28,787 - INFO - Printed the fourth element of the list
+2024-02-13 10:07:28,787 - INFO - Printed the sixth through tenth elements of the list
+2024-02-13 10:07:28,787 - INFO - Updated the list by changing the value of the seventh element
+2024-02-13 10:07:28,787 - INFO - Appended "Marine" to the list
+2024-02-13 10:07:28,787 - INFO - Cleared the list
+2024-02-13 10:07:28,787 - INFO - Created a copy of the original list
+2024-02-13 10:07:28,787 - INFO - Counted occurrences of "Pfc" in the list
+2024-02-13 10:07:28,787 - WARNING - 'SSgt' is not in the list
+2024-02-13 10:07:28,787 - INFO - Inserted "GySgt" at index 1 in the list
+2024-02-13 10:07:28,787 - INFO - Removed an element at index 3 from the list
+2024-02-13 10:07:28,788 - WARNING - 'SSgt' is not in the list
+2024-02-13 10:07:28,788 - INFO - Reversed the order of elements in the list
+2024-02-13 10:07:28,788 - INFO - Sorted the list
+2024-02-13 10:08:54,176 - WARNING - Aye Aye Sir0
+2024-02-13 10:08:54,279 - WARNING - Aye Aye Sir1
+2024-02-13 10:08:54,383 - WARNING - Aye Aye Sir2
+2024-02-13 10:08:54,487 - WARNING - Aye Aye Sir3
+2024-02-13 10:08:54,591 - WARNING - Aye Aye Sir4
+2024-02-13 10:08:54,695 - INFO - Printed the fourth element of the list
+2024-02-13 10:08:54,695 - INFO - Printed the sixth through tenth elements of the list
+2024-02-13 10:08:54,695 - INFO - Updated the list by changing the value of the seventh element
+2024-02-13 10:08:54,696 - INFO - Appended "Marine" to the list
+2024-02-13 10:08:54,696 - INFO - Cleared the list
+2024-02-13 10:08:54,696 - INFO - Created a copy of the original list
+2024-02-13 10:08:54,696 - INFO - Counted occurrences of "Pfc" in the list
+2024-02-13 10:08:54,696 - WARNING - 'SSgt' is not in the list
+2024-02-13 10:08:54,696 - INFO - Inserted "GySgt" at index 1 in the list
+2024-02-13 10:08:54,696 - INFO - Removed an element at index 3 from the list
+2024-02-13 10:08:54,696 - WARNING - 'SSgt' is not in the list
+2024-02-13 10:08:54,696 - INFO - Reversed the order of elements in the list
+2024-02-13 10:08:54,696 - INFO - Sorted the list

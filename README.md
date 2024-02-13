@@ -48,6 +48,7 @@
 ## Module 6 Threat Modeling and Analysis
 - [ Ops Challenge: ]()
 - [Ops Challenge: Event Logging Tool Part 1 of 3](401Ops26.py)
+- [Ops Challenge: Event Logging Tool Part 2 of 3](401Ops27.py)
 
 
 
