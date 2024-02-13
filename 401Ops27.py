@@ -8,19 +8,20 @@
 # Resource:                     https://chat.openai.com/share/b15c3ed2-a523-4434-ac9d-234befe35207
 # Team member:                  Rodolfo Gonzalez
 import logging
-from logging.handlers import RotatingFileHandler
+from logging.handlers import RotatingFileHandler, TimedRotatingFileHandler
 import os
 import time
 
 # Configure logging settings
 logging.basicConfig(filename='collections_tool.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Create and configure handler for rotating file logs
-logger = logging.getLogger('myLogger')
+# Create logging settings
+logger = logging.getLogger('myTimedLogger')
 logger.setLevel(logging.DEBUG)
 
-# Create and configure handler for rotating file logs
-handler = RotatingFileHandler('collections_tool.log',maxBytes=5*1024*1024, backupCount=3)
+# Create and configure handler for timed rotating file logs
+# This will rotate the log file every day, keeping 7 days of backup logs
+handler = TimedRotatingFileHandler('timed_collections_tool.log', when="D", interval=1, backupCount=7)
 logger.addHandler(handler) # This line attaches the handler to the logger
 
 for i in range(5): # Adjust range as needed
