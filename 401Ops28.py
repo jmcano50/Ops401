@@ -2,10 +2,11 @@
 # Script Name:                  Ops Challenge: Ops Challenge: Event Logging Tool Part 3 of 3
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      02/13/2024
+# Purpose:                      StreamHandler and FileHandler 
 # Purpose:                      Incorporating logging capabilities using handlers for both timed rotating file logs and regular file logs, alon with logging to the terminal.
 # Purpose 2:                    Demonstrate the manipulation of lists and the use of various list methods, including basic operations and involving tuples, sets, and dictionaries.                    
 # Execution:                    301Ops8.py
-# Resource:                     https://chat.openai.com/share/c067a3ba-3a24-459c-b1a6-9a3abc5cae53
+# Resource:                     https://chat.openai.com/share/35f7747d-4bc3-4c85-9845-612d7913c439
 # Team member:                  Rodolfo Gonzalez
 
 import logging
