@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Script Name:                  Ops Challenge: Ops Challenge: Event Logging Tool Part 3 of 3
 # Author:                       Juan Miguel Cano
-# Date of latest revision:      02/13/2024
+# Date of latest revision:      02/14/2024
 # Purpose:                      StreamHandler and FileHandler 
 # Purpose:                      Incorporating logging capabilities using handlers for both timed rotating file logs and regular file logs, alon with logging to the terminal.
 # Purpose 2:                    Demonstrate the manipulation of lists and the use of various list methods, including basic operations and involving tuples, sets, and dictionaries.                    
