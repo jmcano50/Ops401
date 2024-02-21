@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Script Name:                  Ops Challenge: Singnature-based malware Detection Part 1 of 3
-# Author:                       Juan Miguel Cano
+# Author:                       Juan Miguel Cano & Rodolfo Gonzalez
 # Date of latest revision:      02/19/2024
 # Purpose:                      Basic antivirus tool in Python                   
 # Team member:                  Rodolfo Gonzalez
