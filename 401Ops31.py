@@ -2,11 +2,7 @@
 # Script Name:                  Ops Challenge: Singnature-based malware Detection Part 1 of 3
 # Author:                       Juan Miguel Cano
 # Date of latest revision:      02/19/2024
-# Purpose:                      StreamHandler and FileHandler 
-# Purpose:                      Incorporating logging capabilities using handlers for both timed rotating file logs and regular file logs, alon with logging to the terminal.
-# Purpose 2:                    Demonstrate the manipulation of lists and the use of various list methods, including basic operations and involving tuples, sets, and dictionaries.                    
-# Execution:                    301Ops8.py
-# Resource:                     
+# Purpose:                      Basic antivirus tool in Python                   
 # Team member:                  Rodolfo Gonzalez
 
 
