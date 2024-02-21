@@ -2,9 +2,8 @@
 # Script Name:                  Ops Challenge: Singnature-based malware Detection Part 2 of 3
 # Author:                       Juan Miguel Cano & Rodolfo Gonzalez
 # Date of latest revision:      02/20/2024
-# Purpose:                      Basic antivirus tool in Python with a secondary Hash Validation feature 
 # Resource:                     Rodolfo Gonzalez
-
+# Purpose: 
 
 '''This code allows users to search for specific files within a specified directory and its subdirectories. 
 Then, it offers the option to calculate and display the SHA-1 hash of any found files. The purpose is to help verify the integrity of files, 

@@ -2,25 +2,13 @@
 # Script Name:                  Ops Challenge: Singnature-based malware Detection Part 1 of 3
 # Author:                       Juan Miguel Cano & Rodolfo Gonzalez
 # Date of latest revision:      02/19/2024
-# Purpose:                      Basic antivirus tool in Python                   
 # Team member:                  Rodolfo Gonzalez
-
+# Purpose: 
 
 """This code serves as a utility for searching specific files within a given directory and its subdirectories, 
 allowing the user to list all available directories"""
 
 import os
-import hashlib
-
-def hash_file(filename):
-    """This function returns the SHA-1 hash of the file passed into it"""
-    h = hashlib.sha1()
-    with open(filename, 'rb') as file:
-        chunk = 0
-        while chunk != b'':
-            chunk = file.read(1024)
-            h.update(chunk)
-    return h.hexdigest()
 
 def search_file(file_name, directory):
     hits = 0
@@ -37,9 +25,7 @@ def search_file(file_name, directory):
             if file == file_name:
                 hits += 1
                 file_path = os.path.join(root, file)
-                print("\033[93mFound:", file_path, "\033[0m")
-                if input("Calculate SHA-1 hash of this file? (y/n): ").strip().lower() == 'y':
-                    print("SHA-1:", hash_file(file_path))
+                print("Found:", file_path)
             files_searched += 1
             print_progress(files_searched)
 
@@ -55,9 +41,9 @@ def list_directories():
         item_path = os.path.join("/", item)
         if os.path.isdir(item_path):
             if item_path == current_directory:
-                print("\033[95m- ", item_path, "(Current Directory)\033[0m")
+                print("- ", item_path, "(Current Directory)")
             else:
-                print("\033[95m- ", item_path, "\033[0m")
+                print("- ", item_path)
     print()
 
 def search_files():
@@ -86,16 +72,16 @@ def search_files():
         print("\nNo files searched due to directory error.")
     else:
         print("\nTotal files searched:", files_searched)
-        print(f"\033[93mTotal hits found: {hits}\033[0m")
+        print("Total hits found:", hits)
 
 def main():
     while True:
-        print("\033[32m\nMenu:\033[0m")
+        print("\nMenu:")
         print("1. Search for files")
         print("2. List available directories")
         print("3. Exit")
 
-        choice = input("\033[32mEnter your choice: \033[0m").strip()
+        choice = input("Enter your choice: ").strip()
 
         if choice == "1":
             search_files()
