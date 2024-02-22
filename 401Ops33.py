@@ -1,9 +1,18 @@
+#!/usr/bin/env python3
+# Script Name:                  Ops Challenge: Singnature-based malware Detection Part 3 of 3
+# Author:                       Juan Miguel Cano & Rodolfo Gonzalez
+# Date of latest revision:      02/21/2024
+# Resource:                     Rodolfo Gonzalez
+# Purpose: 
+'''The script is designed for signature-based malware detection. It allows users to search for specific files within directories, 
+    computes their MD5 hash, and optionally checks the hash against the VirusTotal database. It provides a menu-driven interface allowing users to search for files, 
+    list available directories, or exit the program.'''
 import os
 import hashlib
-import requests  # Ensure you have the 'requests' library installed
+import requests  # Ensure the 'requests' library is installed for fallback or additional HTTP requests
 
 def hash_file(filename):
-    """This function returns the MD5 hash of the file passed into it"""
+    """This function returns the MD5 hash of the file passed into it."""
     h = hashlib.md5()
     try:
         with open(filename, 'rb') as file:
@@ -17,24 +26,15 @@ def hash_file(filename):
     return h.hexdigest()
 
 def check_virustotal(file_hash):
-    """Checks the given hash against the VirusTotal database."""
+    """Checks the given hash against the VirusTotal database using the external script."""
     apikey = os.getenv('API_KEY_VIRUSTOTAL')
     if not apikey:
         print("\033[91mAPI key for VirusTotal is not set. Please set the API_KEY_VIRUSTOTAL environment variable.\033[0m")
         return
-    url = f"https://www.virustotal.com/api/v3/files/{file_hash}"
-    headers = {"x-apikey": apikey}
-    try:
-        response = requests.get(url, headers=headers)
-        if response.status_code == 200:
-            result = response.json()
-            positives = result['data']['attributes']['last_analysis_stats']['malicious']
-            total = sum(result['data']['attributes']['last_analysis_stats'].values())
-            print(f"\033[93mVirusTotal scan: {positives} positives detected out of {total} scans.\033[0m")
-        else:
-            print(f"\033[91mError querying VirusTotal: HTTP {response.status_code}\033[0m")
-    except requests.RequestException as e:
-        print(f"\033[91mNetwork error occurred: {e}\033[0m")
+    # Construct the command to call the external script
+    query = f'python3 virustotal-search.py -k {apikey} -m {file_hash}'
+    # Execute the constructed command
+    os.system(query)
 
 def search_file(file_name, directory):
     hits = 0
@@ -100,12 +100,12 @@ def search_files():
     if hits == 0 and files_searched == 0:
         print("\n\033[91mNo files searched due to directory error.\033[0m")
     else:
-        print("\n\033[96mTotal files searched:", files_searched, "\033[0m")
+        print(f"\n\033[96mTotal files searched: {files_searched}\033[0m")
         print(f"\033[92mTotal hits found: {hits}\033[0m")
 
 def main():
     while True:
-        print("\033[95m\nMenu:\033[0m")
+        print("\n\033[95mMenu:\033[0m")
         print("\033[96m1. Search for files\033[0m")
         print("\033[96m2. List available directories\033[0m")
         print("\033[96m3. Exit\033[0m")
