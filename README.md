@@ -57,6 +57,7 @@
 - [ Ops Challenge: ]()
 - [Singnature-based malware Detection Part 1 of 3](401Ops31.py)
 - [Singnature-based malware Detection Part 2 of 3](401Ops32.py)
+- [Singnature-based malware Detection Part 3 of 3](401Ops33.py)
 
 
 ## Module 8 Web Application Security
