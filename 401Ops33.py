@@ -7,6 +7,7 @@
 '''The script is designed for signature-based malware detection. It allows users to search for specific files within directories, 
     computes their MD5 hash, and optionally checks the hash against the VirusTotal database. It provides a menu-driven interface allowing users to search for files, 
     list available directories, or exit the program.'''
+
 import os
 import hashlib
 import requests  # Ensure the 'requests' library is installed for fallback or additional HTTP requests
