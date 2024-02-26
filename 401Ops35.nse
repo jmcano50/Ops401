@@ -1,29 +1,30 @@
 -- SimpleInfo.nse
--- Script Name:                  Ops Challenge: LUA-language script that gathers simple information about the target.
--- Author:                       Juan Miguel Cano 
--- Date of latest revision:      02/23/2024
--- Resource:                     Nmap Scripting Engine Documentation
--- Purpose:                      This script is designed to gather basic information about the target host, including its hostname, and uptime.
+-- Script Name:                  Simple Information Gathering Script
+-- Author:                       Your Name
+-- Date of latest revision:      Your Date
+-- Purpose:                      Gathers IP address and port status for the target
 
 description = [[
-Simple Information Gathering Script
+Gathers basic information about a target host.
 ]]
 
-author = "Juan Miguel Cano"
+author = "Your Name"
+license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
+categories = {"default", "safe"}
 
-categories = {"discovery", "safe"}
-
--- This function is called for each host scanned
 portrule = function(host, port)
-  return true
+    -- The portrule should return true if the script should run on the given host/port pair.
+    -- For simplicity, we will just return true to run on all hosts and ports provided to Nmap.
+    return true
 end
 
--- This function is called for each host that matches the portrule
 action = function(host, port)
-  -- Gather basic information
-  local hostname = nmap.get_hostname()
-  local uptime = nmap.get_uptime()
-  
-  -- Print the gathered information
-  return string.format("Host: %s\nUptime: %s", hostname, uptime)
+    -- The action function performs the actual work of the script and returns the result as a string.
+    local host_ip = host.ip or "n/a"
+    local port_status = (port.state == "open") and "Open" or "Closed"
+
+    -- Format the output
+    local output = string.format("Host IP: %s\nPort %s: %s\n", host_ip, port.number, port_status)
+
+    return output
 end
