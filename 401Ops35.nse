@@ -3,7 +3,7 @@
 -- Author:                       Juan Miguel Cano 
 -- Date of latest revision:      02/23/2024
 -- Resource:                     Nmap Scripting Engine Documentation
--- Purpose:                      This script is designed to gather basic information about the target host, including its operating system, hostname, and uptime.
+-- Purpose:                      This script is designed to gather basic information about the target host, including its hostname, and uptime.
 
 description = [[
 Simple Information Gathering Script
@@ -21,10 +21,9 @@ end
 -- This function is called for each host that matches the portrule
 action = function(host, port)
   -- Gather basic information
-  local os = nmap.get_os_fingerprint()
   local hostname = nmap.get_hostname()
   local uptime = nmap.get_uptime()
   
   -- Print the gathered information
-  return string.format("Host: %s\nOS: %s\nUptime: %s", hostname, os, uptime)
+  return string.format("Host: %s\nUptime: %s", hostname, uptime)
 end
