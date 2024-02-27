@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+# Script Name:                  Ops Challenge: Web Application Fingerprinting
+# Author:                       Juan Miguel Cano 
+# Date of latest revision:      02/26/2024
+# Resource:                     https://chat.openai.com/share/0ee7cd67-ad43-4797-9239-1c31b586e0f6
+# Purpose:                      
+'''This script performs a banner grabbing on a specified target IP address or URL and port number, 
+    utilizing Nmap to gather information about the services running on those ports.'''
+
 import subprocess
 
 # Colors for better readability
