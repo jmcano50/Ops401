@@ -62,6 +62,8 @@
 
 ## Module 8 Web Application Security
 - [ Ops Challenge: ]()
+- []
+- [Web Application Fingerprinting](401Ops36.py)
 
 
 ## Module 9 Penetration Testing

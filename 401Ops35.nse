@@ -1,7 +1,7 @@
 -- SimpleInfo.nse
 -- Script Name:                  Simple Information Gathering Script
--- Author:                       Your Name
--- Date of latest revision:      Your Date
+-- Author:                       Juan Miguel Cano
+-- Date of latest revision:      02/23/2024
 -- Purpose:                      Gathers IP address and port status for the target
 
 description = [[
