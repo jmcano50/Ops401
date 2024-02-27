@@ -11,27 +11,29 @@ class bcolors:
     BOLD = '\033[1m'  # Bold
     UNDERLINE = '\033[4m'  # Underline
 
-def banner_grabbing(command, target, port):
+# Function to perform banner grabbing
+def banner_grabbing(target, port):
     try:
-        # If port is an empty string, do not include it in the command
-        cmd = command + [target] if port == '' else command + [target, str(port)]
-        output = subprocess.check_output(cmd, stderr=subprocess.STDOUT, timeout=10)
-        print(f"{bcolors.OKGREEN}[*] Banner Grabbing: Connection Successful{bcolors.ENDC}")
-        print(output.decode())
-    except subprocess.TimeoutExpired:
-        print(f"{bcolors.WARNING}[*] Banner Grabbing: Connection Timed Out (Potentially Successful){bcolors.ENDC}")
-    except subprocess.CalledProcessError as e:
-        print(f"{bcolors.FAIL}[!] Error occurred:{bcolors.ENDC}", e.output.decode())
+        # Running nmap command with subprocess.run
+        nmap_command = ['nmap', '-sV', '-p', str(port), '-Pn', target]
+        result = subprocess.run(nmap_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
 
+        # Output the result with colors
+        print(f"{bcolors.OKGREEN}Banner Grabbing Output:{bcolors.ENDC}")
+        print(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print(f"{bcolors.FAIL}An error occurred while trying to run nmap:{bcolors.ENDC}")
+        print(e.stderr)
+
+# Main function to get user input and call the banner grabbing function
 def main():
+    # Getting user input
     target = input(f"{bcolors.HEADER}Enter the URL or IP address (e.g., scanme.nmap.org): {bcolors.ENDC}")
     port = input(f"{bcolors.OKBLUE}Enter the port number (e.g., 80): {bcolors.ENDC}")
 
-    banner_grabbing(['nc', '-v', '-z', '-w', '5'], target, port)
-    banner_grabbing(['timeout', '10', 'telnet'], target, port)
+    # Perform banner grabbing
+    banner_grabbing(target, port)
 
-    # Updated nmap command to include error handling flags and verbose
-    banner_grabbing(['nmap', '-sV', '-Pn', '--unprivileged', '-vv'], target, port)
-
+# Entry point of the script
 if __name__ == "__main__":
     main()
