@@ -64,6 +64,7 @@
 - [ Ops Challenge: ]()
 - [Simple Information Gathering Script](401Ops35.nse)
 - [Web Application Fingerprinting](401Ops36.py)
+- [Cookie Capture Capades](401Ops37.py)
 
 
 ## Module 9 Penetration Testing
