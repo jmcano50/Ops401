@@ -62,7 +62,7 @@
 
 ## Module 8 Web Application Security
 - [ Ops Challenge: ]()
-- []
+- [Simple Information Gathering Script](401Ops35.nse)
 - [Web Application Fingerprinting](401Ops36.py)
 
 
