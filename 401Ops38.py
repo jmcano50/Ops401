@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-# Author: Your Name
-# Date: 2024-02-28
-# Ops Challenge: XSS Vulnerability Detection with Python
+# Script Name:                  Ops Challenge: XSS Vulnerability Detection with Python
+# Author:                       Juan Miguel Cano 
+# Date of latest revision:      02/28/2024
+# Resource:                     https://chat.openai.com/share/0ab8a8fd-8897-4c27-b246-f37adf0412fc
+# Purpose:                      
+"""The purpose of this script is to check a given URL for XSS (Cross-Site Scripting) vulnerabilities 
+by sending a payload and analyzing the response for potential script injection."""
 
-"""This script attempts to detect XSS vulnerabilities in a given URL by injecting a simple XSS payload into form fields and checking if the payload is reflected in the response.
-If the payload is reflected, it indicates a potential XSS vulnerability.
-It uses colored output in the terminal to highlight the results."""
 
 import requests
 import re
