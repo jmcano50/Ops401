@@ -65,6 +65,7 @@
 - [Simple Information Gathering Script](401Ops35.nse)
 - [Web Application Fingerprinting](401Ops36.py)
 - [Cookie Capture Capades](401Ops37.py)
+- [XSS Vulnerability Detection with Python](401Ops38.py)
 
 
 ## Module 9 Penetration Testing
