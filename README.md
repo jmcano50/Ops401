@@ -70,6 +70,7 @@
 
 ## Module 9 Penetration Testing
 - [ Ops Challenge: ]()
+- [Reconnaissance](401reading41.md)
 
 
 ## Module 10 Final Project
