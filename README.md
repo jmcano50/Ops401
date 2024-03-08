@@ -71,6 +71,7 @@
 ## Module 9 Penetration Testing
 - [ Ops Challenge: ]()
 - [Attack Tools Part 2 of 3](401Ops42.py)
+- [Create a Port Scanner](401Ops43.py)
 
 
 ## Module 10 Final Project
