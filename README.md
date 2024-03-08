@@ -70,6 +70,7 @@
 
 ## Module 9 Penetration Testing
 - [ Ops Challenge: ]()
+- [Attack Tools Part 2 of 3](401Ops42.py)
 
 
 ## Module 10 Final Project
