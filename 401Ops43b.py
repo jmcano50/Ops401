@@ -25,9 +25,9 @@ def scan_port(hostip, port):
             elif result == 111:  # Connection refused
                 print(f"Port {port} {RED}closed{RESET}")
             else:
-                print(f"Port {port} status: {result}")
+                print(f"Port {port} status: {RED}{result}{RESET}")
     except socket.error as e:
-        print(f"Error while scanning port {port}: {e}")
+        print(f"Error while scanning port {port}: {RED}{e}{RESET}")
 
 def portScanner(hostip, start_port, end_port):
     print(f"Scanning ports {start_port} to {end_port} on host {hostip}...")
@@ -39,7 +39,7 @@ if __name__ == "__main__":
         hostip = input("Enter the host IP: ")  # Collect host IP from the user
         ipaddress.ip_address(hostip)  # Validate the entered IP address
     except ValueError:
-        print("Invalid IP address format.")
+        print(f"{RED}Invalid IP address format.{RESET}")
         exit(1)
 
     try:
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         if not (0 < start_port <= end_port <= 65535):
             raise ValueError("Invalid port range.")
     except (ValueError, IndexError):
-        print("Invalid port range format.")
+        print(f"{RED}Invalid port range format.{RESET}")
         exit(1)
 
     portScanner(hostip, start_port, end_port)
