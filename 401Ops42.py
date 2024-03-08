@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
-# Script Name: Ops 42: Attack Tools Part 2 of 3
-# Author: Juan Miguel Cano
-# Date of latest revision: 03/05/2024
+# Script Name:                  Ops 42: Attack Tools Part 2 of 3
+# Author:                       Juan Miguel Cano
+# Date of latest revision:      03/05/2024
+# Attributions:                 Rudolfo Gonzalez
+# Resouces:                     https://chat.openai.com/share/a5d10412-571c-464f-a7cf-f3e258c5a21f
+# Purpose:                      
+
+'''The purpose of this script is to automate Nmap scanning operations for specified IP address
+    and port ranges providing options for various scan types.'''
 
 import os
 import sys
