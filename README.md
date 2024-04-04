@@ -16,7 +16,7 @@
     - [401Ops3a Screenshot](Photo_Screenshots/401Ops3a.png)
     - [401Ops3b Screenshot](Photo_Screenshots/401Ops3b.png)
     - [401Ops3c Screenshot](Photo_Screenshots/401Ops3c.png)
-- [Lab 04: Systems Hardening with CIS Standards]()
+- [Lab 04: Systems Hardening with CIS Standards](401Lab4.md)
 - [Systems Hardening with CIS Standards](401Lab4.ps1)
 
 
